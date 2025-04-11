@@ -1,0 +1,165 @@
+.scheme {
+	$parent: &;
+
+	padding: 103px 0 0;
+
+	&__blob {
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		background: radial-gradient(50% 50% at 50% 50%, #00a4fd 0%, rgba(0, 164, 253, 0) 100%);
+	}
+
+	&__title {
+		max-width: 685px;
+		font-size: 30px;
+		line-height: 1.2;
+		font-weight: 500;
+	}
+
+	&__wrapper {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		gap: 177px;
+		margin-top: 61px;
+	}
+
+	&__bg {
+		position: absolute;
+		top: 45%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		z-index: -1;
+		max-width: 816px;
+		width: 100%;
+		height: 100%;
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+		}
+	}
+
+	&__row {
+		display: flex;
+		justify-content: space-between;
+		gap: 20px;
+	}
+
+	&__block {
+		display: flex;
+		flex-direction: column;
+		gap: 11px;
+	}
+
+	&__item {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		max-width: 400px;
+		width: 100%;
+		padding: 10px 12px 10px 15px;
+		border-radius: 12px;
+		background-color: rgba($white, 0.82);
+
+		&--small {
+			padding: 1px 15px;
+		}
+
+		&--result {
+			align-items: flex-start;
+			border-radius: unset;
+			background-color: transparent;
+			padding: 0;
+
+			#{$parent} {
+				&__result {
+					max-width: 296px;
+					min-width: 296px;
+					padding: 5px 18px 5px 15px;
+				}
+			}
+		}
+
+		&--reverse {
+			flex-direction: row-reverse;
+
+			#{$parent} {
+				&__result {
+					flex-direction: row-reverse;
+				}
+
+				&__result-text {
+					text-align: right;
+				}
+			}
+		}
+
+		&--align-end {
+			align-items: flex-end;
+		}
+	}
+
+	&__image-wrapper {
+		min-width: 45px;
+		max-width: 45px;
+	}
+
+	&__image {
+		width: 100%;
+		height: 100%;
+		object-fit: contain;
+	}
+
+	&__solution {
+		min-width: 72px;
+		font-size: 10px;
+		line-height: 1.1;
+		color: $black;
+
+		span {
+			font-size: 14px;
+			font-weight: 500;
+		}
+	}
+
+	&__description {
+		color: $color-title;
+		font-size: 14px;
+		line-height: 1.1;
+		font-weight: 700;
+	}
+
+	&__result {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		background-color: $color-card-2;
+		border-radius: 12px;
+		padding: 9px 18px;
+	}
+
+	&__result-icon {
+		&--top-right {
+			transform: scale(-1, 1);
+		}
+
+		&--bottom-left {
+			transform: scale(1, -1);
+		}
+
+		&--bottol-right {
+			transform: scale(-1, -1);
+		}
+	}
+
+	&__result-text {
+		font-size: 13px;
+
+		span {
+			font-size: 17px;
+		}
+	}
+}

@@ -1,0 +1,23 @@
+.articles {
+	padding: 137px 0 0;
+
+	&__container {
+		display: flex;
+		justify-content: space-between;
+		gap: 20px;
+	}
+
+	&__cards {
+		display: flex;
+		flex-direction: column;
+		gap: 133px;
+	}
+
+	&__advantages {
+		position: sticky;
+		top: 20px;
+		display: flex;
+		flex-direction: column;
+		gap: 32px;
+	}
+}

@@ -1,0 +1,52 @@
+.carousel {
+	padding: 34px 0 0;
+
+	&__slider-wrapper {
+		position: relative;
+		max-width: 860px;
+		margin: 0 auto;
+	}
+
+	&__slider {
+		.swiper-wrapper {
+			padding: 0 22px;
+		}
+	}
+
+	&__slide-wrapper {
+		display: flex;
+		align-items: center;
+		gap: 38px;
+		width: calc(100% - 44px);
+		min-height: 330px;
+		border: 1px solid $white;
+		border-radius: 28px 20px 28px 20px;
+		transform: skewX(-8deg);
+	}
+
+	&__image-wrapper,
+	&__text {
+		transform: skewX(8deg);
+	}
+
+	&__image-wrapper {
+		align-self: flex-end;
+		display: flex;
+		align-items: flex-end;
+	}
+
+	&__nav {
+		top: 50%;
+		left: -44px;
+		right: -44px;
+		transform: translateY(-50%);
+	}
+
+	&__text {
+		font-size: 20px;
+		line-height: 1.2;
+		font-weight: 500;
+		padding-top: 33px;
+		padding-right: 45px;
+	}
+}

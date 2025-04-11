@@ -1,0 +1,21 @@
+header.header
+	.header__blob.blob
+	.header__outer
+		.container.header__container
+			.header__wrapper
+				.header__logos
+					a.header__logo-sigma(href='#', target='_blank')
+						+icon('logo-sigma')(width='123', height='40')
+					a.header__logo-cnews(href='#', target='_blank')
+						+icon('logo-cnews')(width='130', height='24')
+				.header__content
+					.header__title
+						p.header__title-shadow
+							span.split-title Энергия
+							img(src='./images/title-shadow.png', alt='Энергия')
+						p цифровых технологий
+					.header__text.
+						Цифровизация топливно-энергетического комплекса в&nbsp;России набирает обороты. Отрасль стремится автоматизировать
+						процессы, свести потери к минимуму и сделать работу прозрачной.
+			.header__image-wrapper
+				+picture('hero-bg', 'jpg', 'header__image', '')

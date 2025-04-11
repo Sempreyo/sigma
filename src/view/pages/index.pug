@@ -1,0 +1,215 @@
+extends ../layouts/default
+
+block vars
+	-
+		const page = {
+			title: 'Сигма'
+		};
+
+block header
+	include ../blocks/header
+
+block main
+	section.articles
+		.container.articles__container
+			.articles__cards
+				.articles-card
+					.articles-card__type статья
+					.articles-card__image-wrapper
+						+picture('articles/1', 'jpg', 'articles-card__image', '')
+					.articles-card__content
+						h2.articles-card__title.
+							Цифровизация энергетики: <br> куда движется отрасль в 2025 году
+						.articles-card__text.
+							Российский ТЭК постепенно обрастает "цифрой" - разбираемся, какие процессы требуют передовых ИТ-решений
+						+button('Читать', 'articles-card__button', '#')
+				.articles-card.articles-card--quote
+					.articles-card__type интервью
+					.articles-card__person
+						.articles-card__person-data
+							.articles-card__person-name Имя Фамилия
+							.articles-card__person-position Генеральный директор СИГМЫ
+						.articles-card__person-image-quotes
+							.articles-card__person-image
+							+icon('quotes')(class='articles-card__person-quotes')
+					.articles-card__content
+						h2.articles-card__title.
+							Цель — сделать энергосистемы устойчивыми и надежными
+						.articles-card__text.
+							Какую роль цифровизация играет в энергопереходе и&nbsp;повышении эффективности крупных российских
+							компаний — читайте в интервью.
+						+button('Читать', 'articles-card__button', '#')
+				.articles-card.articles-card--reverse
+					.articles-card__type кейс
+					.articles-card__image-wrapper
+						+picture('articles/2', 'jpg', 'articles-card__image', '')
+					.articles-card__content
+						h2.articles-card__title.
+							Умная система для «умных счетчиков»: как решения "Сигма" внедряли в «Интер РАО»
+						.articles-card__text.
+							Отрасль стремится к автоматизации процессов, минимизации потерь и повышению прозрачности работы.
+							Ключевой этап этой трансформации — внедрение «умных счетчиков».
+						+button('Читать', 'articles-card__button', '#')
+				.articles-card.articles-card--high
+					.articles-card__type кейс
+					.articles-card__image-wrapper
+						+picture('articles/3', 'jpg', 'articles-card__image', '')
+					.articles-card__content
+						h2.articles-card__title.
+							Цифровизация электросетей: как “Сигма” усовершенствовала управление данными для&nbsp;«Россетей»
+						.articles-card__text.
+							Точность и скорость принятия решений в&nbsp;энергетике— ключевые факторы стабильности работы всей системы, но
+							без цифровых инструментов на это требуются огромные временные и ресурсные затраты. Решение? Полная цифровизация
+							управления активами и бизнес-процессами.
+						+button('Читать', 'articles-card__button', '#')
+			.articles__advantages-sticky
+				.articles__advantages
+					.advantages-card
+						.advantages-card__number 20
+						.advantages-card__text лет в ИТ-отрасли
+					.advantages-card
+						.advantages-card__text более
+						.advantages-card__number 40
+						.advantages-card__text ИТ-решений для&nbsp;энергетики и&nbsp;ЖКХ
+					.advantages-card
+						.advantages-card__number 29
+						.advantages-card__text решений в&nbsp;Реестре российского ПО
+	section.scheme
+		.container
+			.scheme__title Весь спектр решений для цифровизации энергетики — в одной линейке
+		.container.container--medium
+			.scheme__wrapper
+				.scheme__blob.blob
+				.scheme__bg
+					+picture('scheme', 'png', '', '')
+				.scheme__row
+					.scheme__block
+						.scheme__item
+							.scheme__image-wrapper
+								+picture('scheme/1', 'png', 'scheme__image', '')
+							.scheme__solution СИГМА <br> <span>ССПТИ</span>
+							.scheme__description Автоматизация сбора и&nbsp;передачи технологической информации
+						.scheme__item
+							.scheme__image-wrapper
+								+picture('scheme/2', 'png', 'scheme__image', '')
+							.scheme__solution СИГМА <br> <span>АСР ТЭП</span>
+							.scheme__description Автоматизация расчетов технико-экономических показателей
+						.scheme__item
+							.scheme__image-wrapper
+								+picture('scheme/3', 'png', 'scheme__image', '')
+							.scheme__solution СИГМА <br> <span>Алькор</span>
+							.scheme__description Автоматизация обходов&nbsp;и&nbsp;осмотров, мобильные решения
+						.scheme__item.scheme__item--result.scheme__item--reverse
+							.scheme__result
+								.scheme__result-icon
+									+icon('scheme1')(width='37', height='37')
+								.scheme__result-text Решения для <br> <span>Генерирующих компаний</span>
+							+icon('angle')(width='73', height='32')
+					.scheme__block
+						.scheme__item.scheme__item--small
+							.scheme__image-wrapper
+								+picture('scheme/4', 'png', 'scheme__image', '')
+							.scheme__solution СИГМА <br> <span>СУС</span>
+							.scheme__description Система <br> управления сетями
+						.scheme__item.scheme__item--small
+							.scheme__image-wrapper
+								+picture('scheme/5', 'png', 'scheme__image', '')
+							.scheme__solution СИГМА <br> <span>ГИС</span>
+							.scheme__description Геоинформационная <br> система
+						.scheme__item.scheme__item--small
+							.scheme__image-wrapper
+								+picture('scheme/6', 'png', 'scheme__image', '')
+							.scheme__solution СИГМА <br> <span>ЭЗС</span>
+							.scheme__description Портал оператора электрозаправочных станций
+						.scheme__item.scheme__item--small
+							.scheme__image-wrapper
+								+picture('scheme/7', 'png', 'scheme__image', '')
+							.scheme__solution СИГМА <br> <span>Алькор</span>
+							.scheme__description Мобильные бригады
+						.scheme__item.scheme__item--result
+							.scheme__result
+								.scheme__result-icon
+									+icon('scheme2')(width='36', height='38')
+								.scheme__result-text Решения для <br> <span>Сетевых компаний</span>
+							.scheme__result-icon.scheme__result-icon--top-right
+								+icon('angle')(width='73', height='32')
+				.scheme__row
+					.scheme__block
+						.scheme__item.scheme__item--result.scheme__item--reverse.scheme__item--align-end
+							.scheme__result
+								.scheme__result-icon
+									+icon('scheme3')(width='48', height='38')
+								.scheme__result-text Решения для <br> <span>Пользователей</span>
+							.scheme__result-icon.scheme__result-icon--bottom-left
+								+icon('angle')(width='73', height='32')
+						.scheme__item
+							.scheme__image-wrapper
+								+picture('scheme/8', 'png', 'scheme__image', '')
+							.scheme__solution СИГМА <br> <span>Личный кабинет</span>
+							.scheme__description Личные кабинеты для юридических и физических лиц
+						.scheme__item
+							.scheme__image-wrapper
+								+picture('scheme/9', 'png', 'scheme__image', '')
+							.scheme__solution СИГМА <br> <span>ЭЗС</span>
+							.scheme__description Приложение пользователя
+					.scheme__block
+						.scheme__item.scheme__item--result.scheme__item--align-end
+							.scheme__result
+								.scheme__result-icon
+									+icon('scheme4')(width='37', height='38')
+								.scheme__result-text Решения для <br> <span>Сбытовых компаний</span>
+							.scheme__result-icon.scheme__result-icon--bottol-right
+								+icon('angle')(width='73', height='32')
+						.scheme__item
+							.scheme__image-wrapper
+								+picture('scheme/10', 'png', 'scheme__image', '')
+							.scheme__solution СИГМА <br> <span>ИВК</span>
+							.scheme__description Система сбора, обработки, хранения и предоставления информации с ПУ
+						.scheme__item
+							.scheme__image-wrapper
+								+picture('scheme/11', 'png', 'scheme__image', '')
+							.scheme__solution СИГМА <br> <span>Биллинг</span>
+							.scheme__description Единый биллинг <br> для энергетики
+						.scheme__item
+							.scheme__image-wrapper
+								+picture('scheme/12', 'png', 'scheme__image', '')
+							.scheme__solution СИГМА <br> <span>CRM</span>
+							.scheme__description Управление взаимоотношениями с&nbsp;потребителем
+	section.carousel
+		.container
+			.carousel__slider-wrapper
+				.carousel__slider.swiper
+					.swiper-wrapper
+						.carousel__slide.swiper-slide
+							.carousel__slide-wrapper
+								.carousel__image-wrapper
+									+icon('carousel1')(class='carousel__image', width='343', height='293')
+								.carousel__text.
+									Россия — одна из немногих стран в&nbsp;мире, где работает самая большая в&nbsp;мире система сверхдлинной передачи
+									электроэнергии переменного тока.
+						.carousel__slide.swiper-slide
+							.carousel__slide-wrapper
+								.carousel__image-wrapper
+									+icon('carousel1')(class='carousel__image', width='343', height='293')
+								.carousel__text.
+									Россия — одна из немногих стран в&nbsp;мире, где работает самая большая в&nbsp;мире система сверхдлинной передачи
+									электроэнергии переменного тока.
+				.carousel__nav.swiper-nav
+					.swiper-btn-prev
+						+icon('chevron-left')(width='13', height='21')
+					.swiper-btn-next
+						+icon('chevron-right')(width='13', height='21')
+	.bottom-overflow
+		section.video
+			.video__blob.blob
+			.container
+				.video__title СИГМА СУС — решение для <br> управления данными предприятия
+				.video__iframe
+					.video__poster
+						img(src='./images/poster.jpg', alt='Видео превью')
+						.video__play
+							+icon('play')(width='46', height='53')
+					video(controls)
+							source(src='./images/video1.mp4', type='video/mp4')
+		block footer
+			include ../blocks/footer

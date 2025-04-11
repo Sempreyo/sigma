@@ -1,0 +1,21 @@
+.footer {
+	position: relative;
+	z-index: 10;
+	padding: 70px 0 62px;
+
+	&__logos {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 20px;
+	}
+
+	&__logo-sigma,
+	&__logo-cnews {
+		transition: opacity 0.3s ease;
+
+		&:hover {
+			opacity: 0.7;
+		}
+	}
+}
