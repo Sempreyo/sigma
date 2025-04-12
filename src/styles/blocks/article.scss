@@ -1,0 +1,166 @@
+.article {
+	position: relative;
+	padding: 65px 0 0;
+	overflow: hidden;
+
+	@include max(ti) {
+		padding: 40px 0 0;
+	}
+
+	&__blob {
+		top: 87%;
+		right: -19vw;
+		width: 60vw;
+		height: 60vw;
+
+		@include max(tl) {
+			top: 90%;
+		}
+
+		@include max(ti) {
+			top: 95%;
+		}
+
+		@include max(t) {
+
+		}
+	}
+
+	&__title {
+		max-width: 753px;
+		font-size: 30px;
+		line-height: 1.2;
+		font-weight: 500;
+
+		@include max(d) {
+			font-size: fluid(26, 30, 992, 1280);
+		}
+
+		@include max(tl) {
+			font-size: fluid(24, 26, 768, 992);
+		}
+
+		@include max(ti) {
+			font-size: fluid(20, 24, 0, 768);
+		}
+	}
+
+	&__subtitle {
+		color: $color-title;
+		font-size: 28px;
+		font-weight: 700;
+		margin-top: 40px;
+		margin-bottom: 40px;
+
+		@include max(d) {
+			font-size: fluid(24, 28, 992, 1280);
+			margin-top: 30px;
+			margin-bottom: 20px;
+		}
+
+		@include max(tl) {
+			font-size: fluid(20, 24, 768, 992);
+		}
+
+		@include max(ti) {
+			font-size: fluid(18, 20, 0, 768);
+		}
+
+		@include max(t) {
+			margin-bottom: 10px;
+		}
+	}
+
+	&__image-wrapper {
+		max-width: 95%;
+		border-radius: 34px 24px 34px 24px;
+		overflow: hidden;
+		transform: skewX(-8deg);
+		margin: 41px auto 10px;
+
+		@include max(ti) {
+			margin: 15px auto 10px;
+		}
+	}
+
+	&__image {
+		max-width: calc(100% + 60px);
+		width: calc(100% + 60px);
+		transform: skewX(8deg);
+		margin-left: -30px;
+		aspect-ratio: 17 / 5;
+	}
+
+	&__skewed-container {
+		margin-top: -7px;
+	}
+
+	&__skewed {
+		position: relative;
+		padding: 0 0 113px;
+		color: $black;
+		font-size: 16px;
+		overflow: hidden;
+
+		@include max(tl) {
+			padding: 0 0 70px;
+		}
+
+		@include max(ti) {
+			padding: 0 0 30px;
+			font-size: 14px;
+		}
+
+		&::before {
+			position: absolute;
+			top: 0;
+			left: 50px;
+			z-index: -1;
+			content: "";
+			display: block;
+			width: 120vw;
+			height: 100%;
+			background-color: rgba($color-mount, 0.9);
+			border-radius: 34px 20px 34px 20px;
+			transform: skewX(-8deg);
+
+			@include max(dxl) {
+				transform: skewX(-3deg);
+				left: -40px;
+			}
+
+			@include max(dl) {
+				transform: skewX(-1deg);
+				left: 0;
+			}
+
+			@include max(d) {
+				width: 100vw;
+				border-radius: 20px;
+				transform: skewX(0);
+			}
+		}
+
+		p {
+			margin-bottom: 19px;
+
+			@include max(t) {
+				margin-bottom: 10px;
+			}
+		}
+
+		ul {
+			list-style: inherit;
+			padding-left: 30px;
+			margin-bottom: 22px;
+
+			li {
+				font-weight: 500;
+
+				& + li {
+					margin-top: 21px;
+				}
+			}
+		}
+	}
+}

@@ -3,6 +3,15 @@
 
 	padding: 103px 0 0;
 
+	@include max(tl) {
+		padding: 60px 0 0;
+		overflow: hidden;
+	}
+
+	@include max(ti) {
+		padding: 40px 0 0;
+	}
+
 	&__blob {
 		top: 50%;
 		left: 50%;
@@ -15,6 +24,18 @@
 		font-size: 30px;
 		line-height: 1.2;
 		font-weight: 500;
+
+		@include max(d) {
+			font-size: fluid(26, 30, 992, 1280);
+		}
+
+		@include max(tl) {
+			font-size: fluid(24, 26, 768, 992);
+		}
+
+		@include max(ti) {
+			font-size: fluid(20, 24, 0, 768);
+		}
 	}
 
 	&__wrapper {
@@ -23,6 +44,31 @@
 		flex-direction: column;
 		gap: 177px;
 		margin-top: 61px;
+
+		@include max(tl) {
+			gap: 50px;
+			width: calc(100% + 40px);
+			margin-top: 40px;
+			margin-left: -20px;
+			padding: 20px;
+			box-sizing: border-box;
+		}
+
+		@include max(ti) {
+			gap: 30px;
+			margin-top: 30px;
+		}
+
+		&::before {
+			@include max(tl) {
+				position: absolute;
+				inset: 0;
+				content: "";
+				display: block;
+				background-color: rgba($color-card, 0.8);
+				backdrop-filter: blur(5px);
+			}
+		}
 	}
 
 	&__bg {
@@ -46,6 +92,17 @@
 		display: flex;
 		justify-content: space-between;
 		gap: 20px;
+
+		@include max(tl) {
+			position: relative;
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		@include max(ti) {
+			grid-template-columns: repeat(1, 1fr);
+			gap: 30px;
+		}
 	}
 
 	&__block {
@@ -64,6 +121,14 @@
 		border-radius: 12px;
 		background-color: rgba($white, 0.82);
 
+		@include max(tl) {
+			max-width: 100%;
+		}
+
+		@include max(t) {
+			padding: 10px;
+		}
+
 		&--small {
 			padding: 1px 15px;
 		}
@@ -74,11 +139,21 @@
 			background-color: transparent;
 			padding: 0;
 
+			@include max(tl) {
+				order: -1;
+			}
+
 			#{$parent} {
 				&__result {
 					max-width: 296px;
 					min-width: 296px;
 					padding: 5px 18px 5px 15px;
+
+					@include max(tl) {
+						max-width: 100%;
+						min-width: auto;
+						width: 100%;
+					}
 				}
 			}
 		}
@@ -86,13 +161,25 @@
 		&--reverse {
 			flex-direction: row-reverse;
 
+			@include max(tl) {
+				flex-direction: row;
+			}
+
 			#{$parent} {
 				&__result {
 					flex-direction: row-reverse;
+
+					@include max(tl) {
+						flex-direction: row;
+					}
 				}
 
 				&__result-text {
 					text-align: right;
+
+					@include max(tl) {
+						text-align: left;
+					}
 				}
 			}
 		}
@@ -105,6 +192,11 @@
 	&__image-wrapper {
 		min-width: 45px;
 		max-width: 45px;
+
+		@include max(t) {
+			min-width: 35px;
+			max-width: 35px;
+		}
 	}
 
 	&__image {
@@ -119,6 +211,15 @@
 		line-height: 1.1;
 		color: $black;
 
+		@include max(ti) {
+			max-width: 72px;
+		}
+
+		@include max(t) {
+			min-width: 60px;
+			max-width: 60px;
+		}
+
 		span {
 			font-size: 14px;
 			font-weight: 500;
@@ -130,6 +231,10 @@
 		font-size: 14px;
 		line-height: 1.1;
 		font-weight: 700;
+
+		@include max(400) {
+			font-size: 12px;
+		}
 	}
 
 	&__result {
@@ -141,7 +246,11 @@
 		padding: 9px 18px;
 	}
 
-	&__result-icon {
+	&__angle-icon {
+		@include max(tl) {
+			display: none;
+		}
+
 		&--top-right {
 			transform: scale(-1, 1);
 		}
@@ -150,7 +259,7 @@
 			transform: scale(1, -1);
 		}
 
-		&--bottol-right {
+		&--bottom-right {
 			transform: scale(-1, -1);
 		}
 	}
@@ -160,6 +269,10 @@
 
 		span {
 			font-size: 17px;
+
+			@include max(t) {
+				font-size: 15px;
+			}
 		}
 	}
 }

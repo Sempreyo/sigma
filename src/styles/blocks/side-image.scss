@@ -1,0 +1,52 @@
+.side-image {
+	display: flex;
+	align-items: center;
+	gap: 77px;
+
+	@include max(d) {
+		align-items: flex-start;
+		gap: 40px;
+	}
+
+	@include max(tl) {
+		flex-direction: column;
+		gap: 0;
+	}
+
+	&__content {
+		max-width: 900px;
+	}
+
+	&__image-wrapper {
+		border-radius: 34px 0 0 30px;
+		transform: skewX(-8deg);
+		overflow: hidden;
+		margin-right: calc(-50vw + 542px);
+
+		@include max(d) {
+			margin-top: 40px;
+		}
+
+		@include max(1200) {
+			margin-right: -45px;
+		}
+
+		@include max(tl) {
+			max-width: 95%;
+			border-radius: 34px 24px 34px 24px;
+			margin: 0 auto 30px;
+		}
+	}
+
+	&__image {
+		max-width: calc(100% + 60px);
+		width: calc(100% + 60px);
+		transform: skewX(8deg);
+		margin-left: -30px;
+		aspect-ratio: 13 / 8;
+
+		@include max(tl) {
+			aspect-ratio: 17 / 5;
+		}
+	}
+}

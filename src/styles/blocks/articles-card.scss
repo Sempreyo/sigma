@@ -8,6 +8,20 @@
 	gap: 48px;
 	padding-left: 50px;
 
+	@include max(d) {
+		align-items: unset;
+		max-width: 100%;
+		padding-left: 0;
+	}
+
+	@include max(tl) {
+		gap: 25px;
+	}
+
+	@include max(ti) {
+		flex-direction: column;
+	}
+
 	&::before {
 		content: "";
 		position: absolute;
@@ -20,6 +34,12 @@
 		border-radius: 28px 20px 28px 20px;
 		background-color: $color-card;
 		transform: skewX(-8deg);
+
+		@include max(d) {
+			left: 0;
+			border-radius: 15px;
+			transform: skewX(0);
+		}
 	}
 
 	&__type {
@@ -34,6 +54,11 @@
 		font-weight: 700;
 		text-align: center;
 		text-transform: uppercase;
+
+		@include max(ti) {
+			right: unset;
+			left: 20px;
+		}
 	}
 
 	&__image-wrapper {
@@ -44,6 +69,19 @@
 		transform: skewX(-8deg);
 		margin-top: -30px;
 		margin-left: -30px;
+
+		@include max(d) {
+			border-radius: 15px;
+			transform: skewX(0);
+			margin-top: 0;
+			margin-left: 0;
+		}
+
+		@include max(ti) {
+			order: 1;
+			min-width: auto;
+			max-width: 100%;
+		}
 	}
 
 	&__image {
@@ -54,10 +92,30 @@
 		aspect-ratio: 16 / 13;
 		margin-left: -20px;
 		transform: skewX(8deg);
+
+		@include max(d) {
+			max-width: 100%;
+			width: 100%;
+			transform: skewX(0);
+			margin-left: 0;
+			aspect-ratio: unset;
+		}
+
+		@include max(ti) {
+			aspect-ratio: 16 / 9;
+		}
 	}
 
 	&__content {
 		padding: 42px 30px 30px 0;
+
+		@include max(d) {
+			padding-top: 30px;
+		}
+
+		@include max(ti) {
+			padding: 30px 20px 0;
+		}
 	}
 
 	&__title {
@@ -81,21 +139,44 @@
 		gap: 25px;
 		padding-left: 0;
 
+		@include max(ti) {
+			flex-direction: column;
+		}
+
 		&::before {
 			width: 76%;
 			left: 27px;
 			right: unset;
+
+			@include max(d) {
+				width: auto;
+				left: 0;
+				right: 0;
+			}
 		}
 
 		#{$parent} {
 			&__type {
 				right: unset;
 				left: 92px;
+
+				@include max(ti) {
+					left: 20px;
+				}
 			}
 
 			&__content {
 				max-width: 575px;
 				padding: 38px 30px 35px 93px;
+
+				@include max(d) {
+					max-width: 100%;
+					padding: 30px 0 30px 30px;
+				}
+
+				@include max(ti) {
+					padding: 30px 20px 0;
+				}
 			}
 
 			&__title {
@@ -111,6 +192,17 @@
 				width: calc(100% + 50px);
 				aspect-ratio: 8 / 9;
 				margin-left: -25px;
+
+				@include max(d) {
+					max-width: 100%;
+					width: 100%;
+					aspect-ratio: unset;
+					margin-left: 0;
+				}
+
+				@include max(ti) {
+					aspect-ratio: 16 / 9;
+				}
 			}
 
 			&__button {
@@ -125,6 +217,15 @@
 				min-width: 295px;
 				max-width: 295px;
 				margin-left: -10px;
+
+				@include max(d) {
+					margin-left: 0;
+				}
+
+				@include max(ti) {
+					min-width: auto;
+					max-width: 100%;
+				}
 			}
 
 			&__image {
@@ -132,10 +233,29 @@
 				width: calc(100% + 60px);
 				aspect-ratio: 16 / 21;
 				margin-left: -30px;
+
+				@include max(d) {
+					max-width: 100%;
+					width: 100%;
+					aspect-ratio: unset;
+					margin-left: 0;
+				}
+
+				@include max(ti) {
+					aspect-ratio: 16 / 9;
+				}
 			}
 
 			&__content {
 				padding: 42px 75px 30px 0;
+
+				@include max(d) {
+					padding-top: 30px;
+				}
+
+				@include max(ti) {
+					padding: 30px 20px 0;
+				}
 			}
 		}
 	}
@@ -143,19 +263,45 @@
 	&--quote {
 		gap: 36px;
 
+		@include max(ti) {
+			flex-direction: column;
+			gap: 15px;
+		}
+
 		&::before {
 			left: 31%;
 			background-color: transparent;
 			border: 1px solid $white;
+
+			@include max(d) {
+				left: 0;
+			}
 		}
 
 		#{$parent} {
 			&__content {
 				padding-top: 48px;
+
+				@include max(d) {
+					padding-top: 30px;
+				}
+
+				@include max(ti) {
+					padding: 30px 20px 30px;
+					text-align: center;
+				}
+
+				@include max(t) {
+					padding-top: 15px;
+				}
 			}
 
 			&__button {
 				margin-top: 54px;
+
+				@include max(d) {
+					margin-top: 30px;
+				}
 			}
 
 			&__person {
@@ -163,10 +309,31 @@
 				align-items: center;
 				gap: 10px;
 				margin-left: -50px;
+
+				@include max(d) {
+					margin-left: 0;
+					padding: 20px 0 20px 30px;
+				}
+
+				@include max(ti) {
+					justify-content: center;
+					width: 100%;
+					padding: 20px 20px 0;
+				}
+
+				@include max(t) {
+					flex-direction: column;
+					gap: 20px;
+				}
 			}
 
 			&__person-data {
 				min-width: 130px;
+
+				@include max(t) {
+					order: 1;
+					text-align: center;
+				}
 			}
 
 			&__person-name {
@@ -179,6 +346,10 @@
 				font-size: 14px;
 				font-weight: 500;
 				margin-top: 20px;
+
+				@include max(t) {
+					margin-top: 10px;
+				}
 			}
 
 			&__person-image {
@@ -188,6 +359,12 @@
 				background-color: $color-filler;
 				border-radius: 50%;
 				overflow: hidden;
+
+				@include max(tl) {
+					min-width: 150px;
+					max-width: 150px;
+					height: 150px;
+				}
 			}
 
 			&__image {
@@ -209,6 +386,12 @@
 				bottom: -60px;
 				width: 83px;
 				height: 102px;
+
+				@include max(d) {
+					bottom: -15px;
+					width: 50px;
+					height: 61px;
+				}
 			}
 		}
 	}

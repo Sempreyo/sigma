@@ -3,6 +3,14 @@
 	z-index: 10;
 	padding: 70px 0 62px;
 
+	@include max(tl) {
+		padding: 50px 0;
+	}
+
+	@include max(ti) {
+		padding: 40px 0;
+	}
+
 	&__logos {
 		display: flex;
 		align-items: center;

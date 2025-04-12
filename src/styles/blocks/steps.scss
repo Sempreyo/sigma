@@ -1,0 +1,51 @@
+.steps {
+	padding-bottom: 10px;
+
+	&__title {
+		font-size: 16px;
+		font-weight: 700;
+	}
+
+	&__wrapper {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: 50px;
+		margin-top: 26px;
+
+		@include max(tl) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		@include max(ti) {
+			gap: 20px;
+		}
+
+		@include max(t) {
+			grid-template-columns: repeat(1, 1fr);
+		}
+	}
+
+	&__icon {
+		width: 100%;
+		height: 35px;
+
+		@include max(tl) {
+			height: 54px;
+		}
+
+		@include max(ti) {
+			height: 42px;
+		}
+
+		@include max(t) {
+			max-width: 264px;
+			height: 30px;
+		}
+	}
+
+	&__text {
+		color: $color-title;
+		font-size: 16px;
+		margin-top: 10px;
+	}
+}

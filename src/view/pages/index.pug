@@ -64,14 +64,14 @@ block main
 						+button('Читать', 'articles-card__button', '#')
 			.articles__advantages-sticky
 				.articles__advantages
-					.advantages-card
+					.advantages-card.advantages-card--main
 						.advantages-card__number 20
 						.advantages-card__text лет в ИТ-отрасли
-					.advantages-card
+					.advantages-card.advantages-card--main
 						.advantages-card__text более
 						.advantages-card__number 40
 						.advantages-card__text ИТ-решений для&nbsp;энергетики и&nbsp;ЖКХ
-					.advantages-card
+					.advantages-card.advantages-card--main
 						.advantages-card__number 29
 						.advantages-card__text решений в&nbsp;Реестре российского ПО
 	section.scheme
@@ -104,7 +104,8 @@ block main
 								.scheme__result-icon
 									+icon('scheme1')(width='37', height='37')
 								.scheme__result-text Решения для <br> <span>Генерирующих компаний</span>
-							+icon('angle')(width='73', height='32')
+							.scheme__angle-icon
+								+icon('angle')(width='73', height='32')
 					.scheme__block
 						.scheme__item.scheme__item--small
 							.scheme__image-wrapper
@@ -131,7 +132,7 @@ block main
 								.scheme__result-icon
 									+icon('scheme2')(width='36', height='38')
 								.scheme__result-text Решения для <br> <span>Сетевых компаний</span>
-							.scheme__result-icon.scheme__result-icon--top-right
+							.scheme__angle-icon.scheme__angle-icon--top-right
 								+icon('angle')(width='73', height='32')
 				.scheme__row
 					.scheme__block
@@ -140,7 +141,7 @@ block main
 								.scheme__result-icon
 									+icon('scheme3')(width='48', height='38')
 								.scheme__result-text Решения для <br> <span>Пользователей</span>
-							.scheme__result-icon.scheme__result-icon--bottom-left
+							.scheme__angle-icon.scheme__angle-icon--bottom-left
 								+icon('angle')(width='73', height='32')
 						.scheme__item
 							.scheme__image-wrapper
@@ -158,7 +159,7 @@ block main
 								.scheme__result-icon
 									+icon('scheme4')(width='37', height='38')
 								.scheme__result-text Решения для <br> <span>Сбытовых компаний</span>
-							.scheme__result-icon.scheme__result-icon--bottol-right
+							.scheme__angle-icon.scheme__angle-icon--bottom-right
 								+icon('angle')(width='73', height='32')
 						.scheme__item
 							.scheme__image-wrapper
@@ -190,10 +191,57 @@ block main
 						.carousel__slide.swiper-slide
 							.carousel__slide-wrapper
 								.carousel__image-wrapper
-									+icon('carousel1')(class='carousel__image', width='343', height='293')
+									+icon('carousel2')(class='carousel__image', width='243', height='221')
 								.carousel__text.
-									Россия — одна из немногих стран в&nbsp;мире, где работает самая большая в&nbsp;мире система сверхдлинной передачи
-									электроэнергии переменного тока.
+									В 1912 году была построена первая теплоэлектроцентраль (ТЭЦ) в России
+						.carousel__slide.swiper-slide
+							.carousel__slide-wrapper
+								.carousel__image-wrapper
+									+icon('carousel3')(class='carousel__image', width='331', height='249')
+								.carousel__text.
+									В 2014 году к Олимпиаде в Сочи была установлена ЛЭП в виде снежного барса
+						.carousel__slide.swiper-slide
+							.carousel__slide-wrapper
+								.carousel__image-wrapper
+									+icon('carousel4')(class='carousel__image', width='278', height='212')
+								.carousel__text.
+									100 электросветильников впервые зажглись в Москве в 1881 году
+						.carousel__slide.swiper-slide
+							.carousel__slide-wrapper
+								.carousel__image-wrapper
+									+icon('carousel5')(class='carousel__image', width='338', height='217')
+								.carousel__text.
+									23 млрд кВт/ч энергии в год генерирует Саяно-Шушенская ГЭС — крупнейшая гидроэлектростанция России
+						.carousel__slide.swiper-slide
+							.carousel__slide-wrapper
+								.carousel__image-wrapper
+									+icon('carousel6')(class='carousel__image', width='241', height='209')
+								.carousel__text.
+									13 тыс. линий электропередач сегодня насчитывает сетевое хозяйство нашей страны
+						.carousel__slide.swiper-slide
+							.carousel__slide-wrapper
+								.carousel__image-wrapper
+									+icon('carousel7')(class='carousel__image', width='200', height='226')
+								.carousel__text.
+									3 млн абонентов Петербургской сбытовой компании подключены к решению «Сигмы» «Инновационный биллинг. Пальмира»
+						.carousel__slide.swiper-slide
+							.carousel__slide-wrapper
+								.carousel__image-wrapper
+									+icon('carousel8')(class='carousel__image', width='246', height='197')
+								.carousel__text.
+									263 тыс. мегаватт — общая мощность всех электростанций в России
+						.carousel__slide.swiper-slide
+							.carousel__slide-wrapper
+								.carousel__image-wrapper
+									+icon('carousel9')(class='carousel__image', width='196', height='207')
+								.carousel__text.
+									22 электростанции в 17 регионах России используют решение «Сигмы» «Мобильный обходчик»
+						.carousel__slide.swiper-slide
+							.carousel__slide-wrapper
+								.carousel__image-wrapper
+									+icon('carousel10')(class='carousel__image', width='291', height='201')
+								.carousel__text.
+									506 тыс. км — общая протяженность ЛЭП в России. Это расстояние сравнимо с длиной 12 экваторов Земли
 				.carousel__nav.swiper-nav
 					.swiper-btn-prev
 						+icon('chevron-left')(width='13', height='21')
@@ -211,5 +259,4 @@ block main
 							+icon('play')(width='46', height='53')
 					video(controls)
 							source(src='./images/video1.mp4', type='video/mp4')
-		block footer
-			include ../blocks/footer
+		include ../blocks/footer

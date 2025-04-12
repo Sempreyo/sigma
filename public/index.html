@@ -9,7 +9,7 @@
     <title>Сигма</title>
   </head>
   <body>
-    <header class="header">
+    <header class="header undefined">
       <div class="header__blob blob"></div>
       <div class="header__outer">
         <div class="container header__container">
@@ -116,16 +116,16 @@
           </div>
           <div class="articles__advantages-sticky">
             <div class="articles__advantages">
-              <div class="advantages-card">
+              <div class="advantages-card advantages-card--main">
                 <div class="advantages-card__number">20</div>
                 <div class="advantages-card__text">лет в ИТ-отрасли</div>
               </div>
-              <div class="advantages-card">
+              <div class="advantages-card advantages-card--main">
                 <div class="advantages-card__text">более</div>
                 <div class="advantages-card__number">40</div>
                 <div class="advantages-card__text">ИТ-решений для&nbsp;энергетики и&nbsp;ЖКХ</div>
               </div>
-              <div class="advantages-card">
+              <div class="advantages-card advantages-card--main">
                 <div class="advantages-card__number">29</div>
                 <div class="advantages-card__text">решений в&nbsp;Реестре российского ПО</div>
               </div>
@@ -187,9 +187,11 @@
                     </div>
                     <div class="scheme__result-text">Решения для <br> <span>Генерирующих компаний</span></div>
                   </div>
-                  <svg width="73" height="32">
-                    <use xlink:href="./images/sprite.svg#angle"></use>
-                  </svg>
+                  <div class="scheme__angle-icon">
+                    <svg width="73" height="32">
+                      <use xlink:href="./images/sprite.svg#angle"></use>
+                    </svg>
+                  </div>
                 </div>
               </div>
               <div class="scheme__block">
@@ -242,7 +244,7 @@
                     </div>
                     <div class="scheme__result-text">Решения для <br> <span>Сетевых компаний</span></div>
                   </div>
-                  <div class="scheme__result-icon scheme__result-icon--top-right">
+                  <div class="scheme__angle-icon scheme__angle-icon--top-right">
                     <svg width="73" height="32">
                       <use xlink:href="./images/sprite.svg#angle"></use>
                     </svg>
@@ -261,7 +263,7 @@
                     </div>
                     <div class="scheme__result-text">Решения для <br> <span>Пользователей</span></div>
                   </div>
-                  <div class="scheme__result-icon scheme__result-icon--bottom-left">
+                  <div class="scheme__angle-icon scheme__angle-icon--bottom-left">
                     <svg width="73" height="32">
                       <use xlink:href="./images/sprite.svg#angle"></use>
                     </svg>
@@ -298,7 +300,7 @@
                     </div>
                     <div class="scheme__result-text">Решения для <br> <span>Сбытовых компаний</span></div>
                   </div>
-                  <div class="scheme__result-icon scheme__result-icon--bottol-right">
+                  <div class="scheme__angle-icon scheme__angle-icon--bottom-right">
                     <svg width="73" height="32">
                       <use xlink:href="./images/sprite.svg#angle"></use>
                     </svg>
@@ -360,14 +362,91 @@
                 <div class="carousel__slide swiper-slide">
                   <div class="carousel__slide-wrapper">
                     <div class="carousel__image-wrapper">
-                      <svg class="carousel__image" width="343" height="293">
-                        <use xlink:href="./images/sprite.svg#carousel1"></use>
+                      <svg class="carousel__image" width="243" height="221">
+                        <use xlink:href="./images/sprite.svg#carousel2"></use>
                       </svg>
                     </div>
-                    <div class="carousel__text">
-                      Россия — одна из немногих стран в&nbsp;мире, где работает самая большая в&nbsp;мире система сверхдлинной передачи
-                      электроэнергии переменного тока.
+                    <div class="carousel__text">В 1912 году была построена первая теплоэлектроцентраль (ТЭЦ) в России</div>
+                  </div>
+                </div>
+                <div class="carousel__slide swiper-slide">
+                  <div class="carousel__slide-wrapper">
+                    <div class="carousel__image-wrapper">
+                      <svg class="carousel__image" width="331" height="249">
+                        <use xlink:href="./images/sprite.svg#carousel3"></use>
+                      </svg>
                     </div>
+                    <div class="carousel__text">В 2014 году к Олимпиаде в Сочи была установлена ЛЭП в виде снежного барса</div>
+                  </div>
+                </div>
+                <div class="carousel__slide swiper-slide">
+                  <div class="carousel__slide-wrapper">
+                    <div class="carousel__image-wrapper">
+                      <svg class="carousel__image" width="278" height="212">
+                        <use xlink:href="./images/sprite.svg#carousel4"></use>
+                      </svg>
+                    </div>
+                    <div class="carousel__text">100 электросветильников впервые зажглись в Москве в 1881 году</div>
+                  </div>
+                </div>
+                <div class="carousel__slide swiper-slide">
+                  <div class="carousel__slide-wrapper">
+                    <div class="carousel__image-wrapper">
+                      <svg class="carousel__image" width="338" height="217">
+                        <use xlink:href="./images/sprite.svg#carousel5"></use>
+                      </svg>
+                    </div>
+                    <div class="carousel__text">23 млрд кВт/ч энергии в год генерирует Саяно-Шушенская ГЭС — крупнейшая гидроэлектростанция России</div>
+                  </div>
+                </div>
+                <div class="carousel__slide swiper-slide">
+                  <div class="carousel__slide-wrapper">
+                    <div class="carousel__image-wrapper">
+                      <svg class="carousel__image" width="241" height="209">
+                        <use xlink:href="./images/sprite.svg#carousel6"></use>
+                      </svg>
+                    </div>
+                    <div class="carousel__text">13 тыс. линий электропередач сегодня насчитывает сетевое хозяйство нашей страны</div>
+                  </div>
+                </div>
+                <div class="carousel__slide swiper-slide">
+                  <div class="carousel__slide-wrapper">
+                    <div class="carousel__image-wrapper">
+                      <svg class="carousel__image" width="200" height="226">
+                        <use xlink:href="./images/sprite.svg#carousel7"></use>
+                      </svg>
+                    </div>
+                    <div class="carousel__text">3 млн абонентов Петербургской сбытовой компании подключены к решению «Сигмы» «Инновационный биллинг. Пальмира»</div>
+                  </div>
+                </div>
+                <div class="carousel__slide swiper-slide">
+                  <div class="carousel__slide-wrapper">
+                    <div class="carousel__image-wrapper">
+                      <svg class="carousel__image" width="246" height="197">
+                        <use xlink:href="./images/sprite.svg#carousel8"></use>
+                      </svg>
+                    </div>
+                    <div class="carousel__text">263 тыс. мегаватт — общая мощность всех электростанций в России</div>
+                  </div>
+                </div>
+                <div class="carousel__slide swiper-slide">
+                  <div class="carousel__slide-wrapper">
+                    <div class="carousel__image-wrapper">
+                      <svg class="carousel__image" width="196" height="207">
+                        <use xlink:href="./images/sprite.svg#carousel9"></use>
+                      </svg>
+                    </div>
+                    <div class="carousel__text">22 электростанции в 17 регионах России используют решение «Сигмы» «Мобильный обходчик»</div>
+                  </div>
+                </div>
+                <div class="carousel__slide swiper-slide">
+                  <div class="carousel__slide-wrapper">
+                    <div class="carousel__image-wrapper">
+                      <svg class="carousel__image" width="291" height="201">
+                        <use xlink:href="./images/sprite.svg#carousel10"></use>
+                      </svg>
+                    </div>
+                    <div class="carousel__text">506 тыс. км — общая протяженность ЛЭП в России. Это расстояние сравнимо с длиной 12 экваторов Земли</div>
                   </div>
                 </div>
               </div>

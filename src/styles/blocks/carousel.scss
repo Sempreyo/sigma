@@ -10,7 +10,15 @@
 	&__slider {
 		.swiper-wrapper {
 			padding: 0 22px;
+
+			@include max(tl) {
+				padding: 0;
+			}
 		}
+	}
+
+	&__slide {
+		height: auto;
 	}
 
 	&__slide-wrapper {
@@ -22,17 +30,60 @@
 		border: 1px solid $white;
 		border-radius: 28px 20px 28px 20px;
 		transform: skewX(-8deg);
+		overflow: hidden;
+
+		@include max(tl) {
+			width: 100%;
+			transform: skewX(0);
+		}
+
+		@include max(ti) {
+			min-height: auto;
+			height: 100%;
+		}
+
+		@include max(t) {
+			flex-direction: column;
+			justify-content: space-between;
+			gap: 20px;
+		}
 	}
 
 	&__image-wrapper,
 	&__text {
 		transform: skewX(8deg);
+
+		@include max(tl) {
+			transform: skewX(0);
+		}
 	}
 
 	&__image-wrapper {
 		align-self: flex-end;
 		display: flex;
 		align-items: flex-end;
+
+		@include max(tl) {
+			max-width: 40%;
+			width: 100%;
+		}
+
+		@include max(ti) {
+			padding-top: 30px;
+		}
+
+		@include max(t) {
+			max-width: 100%;
+			order: 1;
+		}
+	}
+
+	&__image {
+		margin: 0 auto;
+
+		@include max(t) {
+			max-height: 150px;
+		}
 	}
 
 	&__nav {
@@ -40,6 +91,14 @@
 		left: -44px;
 		right: -44px;
 		transform: translateY(-50%);
+
+		@include max(tl) {
+			top: unset;
+			left: 0;
+			right: 0;
+			bottom: -50px;
+			transform: unset;
+		}
 	}
 
 	&__text {
@@ -48,5 +107,13 @@
 		font-weight: 500;
 		padding-top: 33px;
 		padding-right: 45px;
+
+		@include max(tl) {
+			padding-top: 0;
+		}
+
+		@include max(t) {
+			padding: 20px 20px 0 20px;
+		}
 	}
 }

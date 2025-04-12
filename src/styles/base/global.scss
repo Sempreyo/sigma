@@ -195,6 +195,11 @@ ol {
 	gap: 10px;
 	pointer-events: none;
 
+	@include max(tl) {
+		justify-content: center;
+		gap: 20px;
+	}
+
 	.swiper-btn-prev,
 	.swiper-btn-next {
 		position: relative;
