@@ -20,6 +20,8 @@
 
 	&__logo-sigma,
 	&__logo-cnews {
+		display: inline-flex;
+		align-items: center;
 		transition: opacity 0.3s ease;
 
 		&:hover {

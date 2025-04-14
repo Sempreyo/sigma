@@ -39,8 +39,9 @@
 		position: relative;
 		border-radius: 15px;
 		overflow: hidden;
-		margin-top: 34px;
-		aspect-ratio: 20 / 9;
+		max-width: 1000px;
+		margin: 34px auto 0;
+		aspect-ratio: 16 / 9;
 
 		video {
 			position: absolute;

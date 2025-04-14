@@ -6,11 +6,14 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	width: 30px;
-	height: 30px;
+	width: 35px;
+	height: 35px;
+	padding: 5px;
+	border-radius: 3px;
+	background-color: rgba($black, 0.2);
 	opacity: 0;
 	pointer-events: none;
-	transition: opacity 0.3s ease;
+	transition: background-color 0.3s ease;
 	cursor: pointer;
 
 	@include max(tl) {
@@ -22,11 +25,7 @@
 		pointer-events: auto;
 	}
 
-	&:hover svg {
-		transform: translateY(-3px);
-	}
-
-	svg {
-		transition: 0.3s ease;
+	&:hover {
+		background-color: rgba($black, 0.7);
 	}
 }

@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			const slider = new Swiper(el, {
 				slidesPerView: 1,
 				spaceBetween: 10,
+				autoHeight: true,
 				navigation: {
 					nextEl: slideshowCarouselNext,
 					prevEl: slideshowCarouselPrev,
