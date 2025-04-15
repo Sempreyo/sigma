@@ -120,6 +120,7 @@
 		padding: 10px 12px 10px 15px;
 		border-radius: 12px;
 		background-color: rgba($white, 0.82);
+		transition: background-color 0.3s ease;
 
 		@include max(tl) {
 			max-width: 100%;
@@ -127,6 +128,10 @@
 
 		@include max(t) {
 			padding: 10px;
+		}
+
+		&:not(.scheme__item--result):hover {
+			background-color: rgba($white, 0.6);
 		}
 
 		&--small {
@@ -154,6 +159,11 @@
 						min-width: auto;
 						width: 100%;
 					}
+				}
+
+				&__result-icon {
+					display: flex;
+					align-items: center;
 				}
 			}
 		}

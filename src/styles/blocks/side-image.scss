@@ -2,7 +2,6 @@
 	display: flex;
 	align-items: flex-start;
 	gap: 77px;
-	padding-bottom: 20px;
 
 	@include max(d) {
 		align-items: flex-start;
@@ -12,6 +11,28 @@
 	@include max(tl) {
 		flex-direction: column;
 		gap: 0;
+	}
+
+	& + .article__subtitle {
+		margin-top: 21px;
+
+		@include max(d) {
+			margin-top: 11px;
+		}
+
+		@include max(tl) {
+			margin-top: 30px;
+		}
+	}
+
+	& + p {
+		@include max(tl) {
+			margin-top: 19px;
+		}
+
+		@include max(t) {
+			margin-top: 10px;
+		}
 	}
 
 	&__content {
@@ -25,10 +46,14 @@
 		border-radius: 34px 0 0 30px;
 		transform: skewX(-8deg);
 		overflow: hidden;
-		margin-right: calc(-22vw);
+		margin-right: calc(-25vw);
+
+		@include max(dxl) {
+			margin-right: calc(-22vw);
+		}
 
 		@include max(1200) {
-			margin-right: -45px;
+			margin-right: -95px;
 		}
 
 		@include max(tl) {

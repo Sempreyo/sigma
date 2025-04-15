@@ -160,18 +160,32 @@
 	}
 
 	&__text {
+		position: relative;
 		font-size: 16px;
-		border-left: 1px solid $white;
 		padding-left: 42px;
 		margin-left: 48px;
 
 		@include max(d) {
-			border-left: 0;
-			border-top: 1px solid $white;
 			padding-left: 0;
 			padding-top: 20px;
 			margin-left: 0;
 			margin-top: 20px;
+		}
+
+		&::before {
+			position: absolute;
+			top: 0;
+			left: 0;
+			content: "";
+			display: block;
+			width: 1px;
+			height: calc(100% + 10px);
+			background-color: $white;
+
+			@include max(d) {
+				width: 100%;
+				height: 1px;
+			}
 		}
 	}
 
