@@ -126,9 +126,9 @@ ol {
 
 /* Adv mark article */
 .token-mark-block {
+	display: none;
 	position: relative;
 	z-index: 20;
-	display: block;
 	max-width: 1288px;
 	width: 100%;
 	padding: 0 20px;
